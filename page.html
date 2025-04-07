@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test</title>
+    <link rel="icon" href="assets/photo/Logo .ico">
+    <link rel="stylesheet" href="assets/css/page.css">
+</head>
+</head>
+
+<body>
+     <!-- Barre de navigation -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="assets/photo/Logo .ico" alt="" class="logo"/>
+      <span class="brand-name">Vanilla Type</span>
+    </div>
+    <div class="nav-right">
+      <div class="user-info">
+        <img src="assets/photo/R.jpg" alt="" class="avatar"/>
+        <span class="username">Bella</span>
+        <button class="logout-btn">Déconnexion</button>
+      </div>
+    </div>
+  </nav>
+
+   <!-- CORPS DU JEU -->
+   <div class="game-container">
+    <div class="game-box">
+      <div id="welcome">Bienvenue sur Vanilla Type !</div>
+      <div id="timer">⏱ Temps restant : 60s</div>
+
+      <label for="mode">Choisis le mode :</label>
+      <select id="mode">
+        <option value="easy">Facile</option>
+        <option value="medium">Moyen</option>
+        <option value="hard">Difficile</option>
+      </select>
+
+      <p id="word-display">Exemple</p>
+      <input type="text" id="input-field" placeholder="Tape ici..." autofocus/>
+
+      <div class="stats">
+        <span>Score : <strong>0</strong></span>
+        <span>Erreurs : <strong>0</strong></span>
+      </div>
+
+      <p id="results">Résultats ici...</p>
+
+      <div class="controls">
+        <button class="action-btn">Recommencer</button>
+        <button class="action-btn">Voir les stats</button>
+      </div>
+
+      <div class="tip">Plus tu tapes vite, plus tu gagnes de points !</div>
+    </div>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+

@@ -46,8 +46,9 @@ form div{
 label{
     color: #11e4eb;
     padding-bottom: 0.5rem;
+    font-weight: bold;
 }
-input {
+.username , .password {
     background: rgba(255, 255, 255 , 0.1);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -59,7 +60,7 @@ input {
     width: 25rem;
     border-radius: 6px;
 }
-button {
+.button {
     width: 8rem;
     height: 2rem;
     border: 1px solid rgb(234, 254, 255);
@@ -70,4 +71,30 @@ button {
     margin-top: 1rem;
     cursor: pointer;
     border-radius: 5px;
+}
+.alert{
+    width: 20rem;
+    height: 2rem;
+    border-radius: 3px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; 
+}
+.alert p{
+    color: white;
+    font-weight: bold;
+}
+
+@keyframes alertAnimation{
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes changeBackground{
+    0% {background-color: white;}
+    50% {background-color: red;}
+    100% {background-color: white;}
 }

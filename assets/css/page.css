@@ -1,8 +1,7 @@
-/* Couleurs inspirées du bleu marine du logo */
 :root {
-    --main-blue: #1b263b;
-    --accent-blue: #415a77;
-    --light-blue: #778da9;
+    --primary-color: #1b263b;
+    --secondary-color: #415a77;
+    --third-color: #778da9;
     --white: #ffffff;
     --gray: #e0e1dd;
   }
@@ -15,11 +14,10 @@
     color: #fff;
   }
   
-  /* NAVBAR */
   .navbar {
-    width: 100%;
+    max-width:100vw;
     height: 70px;
-    background-color: var(--main-blue);
+    background-color: var(--primary-color);
     color: var(--white);
     display: flex;
     justify-content: space-between;
@@ -35,11 +33,12 @@
   }
   
   .logo {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
   }
   
-  .brand-name {
+  .title {
     font-size: 22px;
     font-weight: bold;
     color: var(--white);
@@ -50,13 +49,13 @@
     align-items: center;
   }
   
-  .user-info {
+  .user {
     display: flex;
     align-items: center;
     gap: 15px;
   }
   
-  .avatar {
+  .user_img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -67,7 +66,7 @@
   }
   
   .logout-btn {
-    background-color: var(--accent-blue);
+    background-color: var(--secondary-color);
     border: none;
     padding: 8px 12px;
     border-radius: 5px;
@@ -75,8 +74,7 @@
     cursor: pointer;
   }
   
-  /* CORPS DU JEU */
-.game-container {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,7 +82,7 @@
     padding: 1rem;
   }
   
-  .game-box {
+  .container__box {
     background: rgba(255, 255, 255, 0.07);
     border-radius: 20px;
     padding: 2rem;
@@ -95,14 +93,14 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   }
   
-  .game-box label,
-  .game-box select,
-  .game-box input {
+  .container__box label,
+  .container__box select,
+  .container__box input {
     margin-top: 1rem;
     font-size: 1rem;
   }
   
-  #word-display {
+  #word-to-type {
     font-size: 1.8rem;
     margin: 1.2rem 0;
     font-weight: bold;
@@ -138,7 +136,7 @@
     border-radius: 20px;
     cursor: pointer;
   }
-  .tip {
+  .sentence {
     margin-top: 1.5rem;
     font-style: italic;
     color: #e6f2ff;

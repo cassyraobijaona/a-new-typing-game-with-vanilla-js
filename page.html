@@ -11,24 +11,22 @@
 </head>
 
 <body>
-     <!-- Barre de navigation -->
   <nav class="navbar">
     <div class="nav-left">
       <img src="assets/photo/Logo .ico" alt="" class="logo"/>
-      <span class="brand-name">Vanilla Type</span>
+      <span class="Title">Vanilla Type</span>
     </div>
     <div class="nav-right">
-      <div class="user-info">
-        <img src="assets/photo/R.jpg" alt="" class="avatar"/>
+      <div class="user">
+        <img src="assets/photo/R.jpg" alt="" class="user_img"/>
         <span class="username">Bella</span>
         <button class="logout-btn">Déconnexion</button>
       </div>
     </div>
   </nav>
 
-   <!-- CORPS DU JEU -->
-   <div class="game-container">
-    <div class="game-box">
+   <div class="container">
+    <div class="container__box">
       <div id="welcome">Bienvenue sur Vanilla Type !</div>
       <div id="timer">⏱ Temps restant : 60s</div>
 
@@ -39,22 +37,22 @@
         <option value="hard">Difficile</option>
       </select>
 
-      <p id="word-display">Exemple</p>
-      <input type="text" id="input-field" placeholder="Tape ici..." autofocus/>
+      <p id="word-to-type">Exemple</p>
+      <textarea name="" id="input-field" placeholder="Tape ici..." autofocus></textarea>
 
       <div class="stats">
-        <span>Score : <strong>0</strong></span>
-        <span>Erreurs : <strong>0</strong></span>
+        <span>Score : <b>0</b></span>
+        <span>Erreurs : <b>0</b></span>
       </div>
 
       <p id="results">Résultats ici...</p>
 
       <div class="controls">
-        <button class="action-btn">Recommencer</button>
+        <button class="action-btn">Commencer</button>
         <button class="action-btn">Voir les stats</button>
       </div>
 
-      <div class="tip">Plus tu tapes vite, plus tu gagnes de points !</div>
+      <div class="sentence">Plus tu tapes vite, plus tu gagnes de points !</div>
     </div>
   </div>
     <script src="script.js"></script>

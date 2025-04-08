@@ -10,7 +10,7 @@ button.addEventListener("click", function(){
             button.value = "Login"
         }, 2000)
         setTimeout(function(){
-            window.location.href = "/a-new-typing-game-with-vanilla-js/page.html"
+            window.location.href = "../html/page.html"
         },2000)
     }else{
         button.value = "..."

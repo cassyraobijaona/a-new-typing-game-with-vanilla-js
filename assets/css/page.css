@@ -8,14 +8,12 @@
   
   body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: url('../photo/bcg.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: #181f29 ;
     color: #fff;
   }
   
   .navbar {
-    max-width:100vw;
+    max-width:100%;
     height: 70px;
     background-color: var(--primary-color);
     color: var(--white);
@@ -74,45 +72,43 @@
     cursor: pointer;
   }
   
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(90vh - 90px);
+
+  
+  .container__box {  
     padding: 1rem;
+    width: 97%;
   }
+
+ .second_navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  box-shadow: 0 1px 2px rgba(255, 252, 252, 0.1);
+  width: 40%;
+  padding: 1rem;
+ }
+
+ .write {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
   
-  .container__box {
-    background: rgba(255, 255, 255, 0.07);
-    border-radius: 20px;
-    padding: 2rem;
-    backdrop-filter: blur(12px);
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  }
-  
-  .container__box label,
-  .container__box select,
-  .container__box input {
-    margin-top: 1rem;
-    font-size: 1rem;
-  }
-  
-  #word-to-type {
+  #word {
     font-size: 1.8rem;
-    margin: 1.2rem 0;
+    margin: 5rem 0;
     font-weight: bold;
     color: white;
+    font-style: italic;
   }
   
+
   #input-field {
     padding: 0.6rem;
     font-size: 1rem;
     border: none;
     border-radius: 8px;
-    width: 100%;
+    width: 70%;
   }
   
   .stats {
@@ -122,10 +118,10 @@
   }
   
   .controls {
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: flex-end;
+    gap: -5rem;
   }
   
   .action-btn {
@@ -137,8 +133,8 @@
     cursor: pointer;
   }
   .sentence {
-    margin-top: 1.5rem;
-    font-style: italic;
+    display: flex;
+    justify-content: flex-end;
     color: #e6f2ff;
   }
   

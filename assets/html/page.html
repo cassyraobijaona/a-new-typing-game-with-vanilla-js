@@ -18,7 +18,7 @@
     </div>
     <div class="nav-right">
       <div class="user">
-        <img src="assets/photo/R.jpg" alt="" class="user_img"/>
+        <img src="../photo/R.jpg" alt="" class="user_img"/>
         <span class="username">Bella</span>
         <button class="logout-btn">Déconnexion</button>
       </div>
@@ -27,31 +27,30 @@
 
    <div class="container">
     <div class="container__box">
-      <div id="welcome">Bienvenue sur Vanilla Type !</div>
-      <div id="timer">⏱ Temps restant : 60s</div>
-
-      <label for="mode">Choisis le mode :</label>
-      <select id="mode">
-        <option value="easy">Facile</option>
-        <option value="medium">Moyen</option>
-        <option value="hard">Difficile</option>
-      </select>
-
-      <p id="word-to-type">Exemple</p>
+      <div class="second_navbar">
+        <div id="timer">⏱ Temps restant : 60s</div>
+        <label for="mode">Choisis le mode :
+          <select id="mode">
+            <option value="easy">Facile</option>
+            <option value="medium">Moyen</option>
+            <option value="hard">Difficile</option>
+          </select>
+        </label>
+      </div>
+      <div class="write">
+        <p id="word">This is just an example sentence for the moment</p>
       <textarea name="" id="input-field" placeholder="Tape ici..." autofocus></textarea>
+      </div>
+      
+      <div class="controls">
+        <button class="action-btn">Voir les stats</button>
+      </div>
 
       <div class="stats">
         <span>Score : <b>0</b></span>
         <span>Erreurs : <b>0</b></span>
       </div>
-
-      <p id="results">Résultats ici...</p>
-
-      <div class="controls">
-        <button class="action-btn">Commencer</button>
-        <button class="action-btn">Voir les stats</button>
-      </div>
-
+      
       <div class="sentence">Plus tu tapes vite, plus tu gagnes de points !</div>
     </div>
   </div>

@@ -1,36 +1,32 @@
+/**
+ * Point culture (en Français car je suis un peu obligé): 
+ * Dans ce genre de jeu, un mot equivaut a 5 caractères, y compris les espaces. 
+ * La precision, c'est le pourcentage de caractères tapées correctement sur toutes les caractères tapées.
+ * 
+ * Sur ce... Amusez-vous bien ! 
+ */
+let startTime = null, previousEndTime = null;
+let currentWordIndex = 0;
+const wordsToType = [];
+
 const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("word-display");
 const inputField = document.getElementById("input-field");
 const results = document.getElementById("results");
 
-let startTime = null, previousEndTime = null;
-let currentWordIndex = 0;
-const wordsToType = [];
-
 const words = {
-    easy: [ 
-        "apple", "house", "music", "water", "happy",
-        "light", "watch", "smile", "beach", "dream",
-        "green", "tiger", "piano", "candy", "cloud",
-        "dance", "heart", "juice", "knife", "lemon"
-    ],
-    medium: [ 
-        "banana", "guitar", "sunrise", "keyboard",
-        "library", "octopus", "rainbow", "elephant",
-        "mountain", "wonderful"
-    ],
-    hard: [ 
-        "extravagant", "mathematics", "photosynthesis",
-        "uncomfortable", "questionnaire", "architecture",
-        "confidential", "revolutionary"
-    ]
+    easy: ["apple", "banana", "grape", "orange", "cherry"],
+    medium: ["keyboard", "monitor", "printer", "charger", "battery"],
+    hard: ["synchronize", "complicated", "development", "extravagant", "misconception"]
 };
 
+// Generate a random word from the selected mode
 const getRandomWord = (mode) => {
     const wordList = words[mode];
     return wordList[Math.floor(Math.random() * wordList.length)];
 };
 
+// Initialize the typing test
 const startTest = (wordCount = 50) => {
     wordsToType.length = 0; // Clear previous words
     wordDisplay.innerHTML = ""; // Clear display

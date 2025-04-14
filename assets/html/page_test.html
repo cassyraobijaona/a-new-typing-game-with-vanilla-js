@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">7
-    <link rel="stylesheet" href="">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../photo/Logo .ico">
+    <title>Vanilla Typing Test</title>
 </head>
+
 <body>
-    
+    <header>
+        <h1>Typing Test</h1>
+        <label for="mode">Select Mode:</label>
+        <select id="mode">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </header>
+
+    <main>
+        <p id="word-display"></p>
+        <input type="text" id="input-field" autofocus>
+        <p id="results">Results : </p>
+    </main>
+
+    <script src="../js/scrpit_test.js"></script>
 </body>
-</html>

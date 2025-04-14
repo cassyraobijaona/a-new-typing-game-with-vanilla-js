@@ -20,14 +20,6 @@ h1 {
     font-size: 4rem;
     color: #11e4eb;
 }
-p{
-    color: #ffffff;
-    text-align: center;
-    font-size: 1.1rem;
-}
-.text{
-    padding: 5rem;
-}
 .login{
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -52,35 +44,58 @@ form div{
     flex-direction: column;
     padding: 1.5rem;
 }
-.btn{
-   width: 20rem;
-   display: flex;
-   justify-content: space-between;
+label{
+    color: #11e4eb;
+    padding-bottom: 0.5rem;
+    font-weight: bold;
 }
-.login_btn {
-    width: 8.5rem;
-    height: 2.5rem;
+.username , .password {
+    background: rgba(255, 255, 255 , 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 0.5px solid rgb(231, 253, 255);
+    padding: 0.8rem;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    width: 25rem;
+    border-radius: 6px;
+}
+.button {
+    width: 8rem;
+    height: 2rem;
     border: 1px solid rgb(234, 254, 255);
     color: #11e4eb;
     font-size: 0.9rem;
     font-weight: 900;
     background: rgba(255, 255, 255 , 0.1);
     margin-top: 1rem;
-    cursor: url(../photo/pointer.cur), auto;
+    cursor: url(../photo/pointer.cur), auto;        
     border-radius: 5px;
 }
-
-.play {
-    width: 8.5rem;
-    height: 2.5rem;
-    border: 1px solid rgb(234, 254, 255);
-    color: #ffffff;
-    font-size: 0.9rem;
-    font-weight: 900;
-    background: rgb(238, 115, 0);
-    margin-top: 1rem;
-    cursor: url(../photo/pointer.cur), auto;
-    border-radius: 5px;
+.alert{
+    width: 20rem;
+    height: 2rem;
+    border-radius: 3px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; 
+}
+.alert p{
+    color: white;
+    font-weight: bold;
 }
 
+@keyframes alertAnimation{
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
 
+@keyframes changeBackground{
+    0% {background-color: white;}
+    50% {background-color: red;}
+    100% {background-color: white;}
+}

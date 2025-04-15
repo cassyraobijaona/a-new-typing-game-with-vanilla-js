@@ -13,6 +13,26 @@ const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("word-display");
 const inputField = document.getElementById("input-field");
 const results = document.getElementById("results");
+const btnToggle = document.querySelector(".btn_toggle");
+const icon = btnToggle.querySelector("i");
+
+btnToggle.addEventListener("click", () => {
+  const body = document.body;
+
+  if (body.classList.contains("dark")) {
+    body.classList.remove("dark");
+    body.classList.add("light");
+
+    icon.classList.remove("bx-moon");
+    icon.classList.add("bx-sun");
+  } else {
+    body.classList.remove("light");
+    body.classList.add("dark");
+
+    icon.classList.remove("bx-sun");
+    icon.classList.add("bx-moon");
+  }
+});
 
 const words = {
     easy: ["apple", "banana", "grape", "orange", "cherry"],

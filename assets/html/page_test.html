@@ -23,19 +23,50 @@
         </div>
     </nav>
     
-      <div class="container">
-        <div class="write">
-          <p id="word-display">Start typing to begin...</p>
-          <input type="text" id="input-field" placeholder="Type here..." autofocus>
-        </div>
-        
-        <div class="results">
-            <h2>Final results</h2>
-            <p id="finalWpm">WPM: 0</p>
-            <p id="finalAccuracy">Accuracy: 0%</p>
-            <p id="finalWord">Word: 0</p>
-            <p id="finalChars">Typed characters: 0</p>
+    <div class="container">
+      <div class="container__stats">
+        <div class="timer">30s</div>
+        <div class="stats" id="stat-box_live">
+            <div class="stat-box" >
+              <div class="stat-label">WPM</div>
+                <div class="stat-value" id="wpm">0</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">Accuracy</div>
+                <div class="stat-value" id="accuracy">0%</div>
+            </div>
         </div>
       </div>
-      <script src="../js/scrpit_test.js"></script>
+
+      <div class="text_display"></div>
+
+      <div class="write">
+        <input type="text" class="text_input" placeholder="Type here..." autofocus>
+      </div>
+      
+      <div class="results" >
+        <h2>Results</h2>
+        <div class="stats">
+            <div class="result_box">
+              <div class="stat-label">WPM</div>
+              <div class="stat-value" id="final_wpm">0</div>
+            </div>
+            <div class="result_box">
+              <div class="stat-label">Accuracy</div>
+              <div class="stat-value" id="final_accuracy">0%</div>
+            </div>
+            <div class="result_box">
+              <div class="stat-label">Word</div>
+              <div class="stat-value" id="total_words">0</div>
+            </div>
+            <div class="result_box">
+              <div class="stat-label">characters</div>
+              <div class="stat-value" id="total_chars">0</div>
+            </div>
+        </div>
+        <button class="restart_btn">Restart</button>
+      </div>
+    </div>
+    <script src="../js/scrpit_test.js"></script>
 </body>
+</html>

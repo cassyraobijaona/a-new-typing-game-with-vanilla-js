@@ -5,24 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../photo/Logo .ico">
     <title>Vanilla Typing Test</title>
+    <link rel="stylesheet" href="../css/page_test.css">
 </head>
 
 <body>
-    <header>
-        <h1>Typing Test</h1>
-        <label for="mode">Select Mode:</label>
-        <select id="mode">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
-    </header>
-
-    <main>
-        <p id="word-display"></p>
-        <input type="text" id="input-field" autofocus>
-        <p id="results">Results : </p>
-    </main>
+    <nav class="navbar">
+        <div class="nav-left">
+          <img src="../photo/Logo.PNG" alt="Logo" class="logo"/>
+          <span class="title">Vanilla Type</span>
+        </div>
+        <input type="button" value = "Login" class="button">
+    </nav>
+    
+      <div class="container">
+        <div class="write">
+          <p id="word-display">Start typing to begin...</p>
+          <input type="text" id="input-field" autofocus placeholder="Type here...">
+        </div>
+        
+        <div class="results">
+            <h2>Final results</h2>
+            <p id="finalCpm">Characters per minute: 0</p>
+            <p id="finalAccuracy">Accuracy: 0%</p>
+            <p id="finalPhrases">Completed sentences: 0</p>
+            <p id="finalChars">Typed characters: 0</p>
+        </div>
+      </div>
 
     <script src="../js/scrpit_test.js"></script>
 </body>

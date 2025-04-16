@@ -168,11 +168,11 @@ function updateStats() {
     const typingTime = (currentTime - startTime) / 1000 / 60; 
     
     const words = correctChars / 5; 
-    const wpm = Math.round(words / typingTime) || 0; 
-    const accuracy = totalChars > 0 ? Math.round((correctChars / totalChars) * 100) : 0; 
+    const wpmValue = Math.round(words / typingTime) || 0; 
+    const accuracyValue = totalChars > 0 ? Math.round((correctChars / totalChars) * 100) : 0; 
 
-    wpm.textContent = wpm; 
-    accuracy.textContent = accuracy + '%'; 
+    wpm.textContent = wpmValue; 
+    accuracy.textContent = accuracyValue + '%'; 
 }
 
 function endGame() {

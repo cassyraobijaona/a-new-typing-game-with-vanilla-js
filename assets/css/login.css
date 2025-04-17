@@ -34,13 +34,8 @@ h1 {
     font-size: 1.3rem;
     color: #11e4eb;
     cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.icons:hover {
-    transform: rotate(-90deg);
-    color: #0bc2d4;
-}
 
 .login {
     backdrop-filter: blur(20px);

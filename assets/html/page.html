@@ -3,22 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Typing Test</title>
+  <title>Vanilla Typing</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="icon" href="../photo/Logo .ico">
   <link rel="stylesheet" href="../css/page.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
-<body>
+<body class="dark">
   <nav class="navbar">
     <div class="nav-left">
       <img src="../photo/Logo.PNG" alt="" class="logo"/>
       <span class="Title">Vanilla Type</span>
     </div>
     <div class="nav-right">
+      <div class="btn_toggle">
+        <i class='bx bx-moon'></i>
+      </div>
       <div class="user">
         <img src="../photo/R.jpg" alt="" class="user_img"/>
-        <span class="username">Bella</span>
-        <button class="logout-btn">Déconnexion</button>
+        <span class="username">User</span>
+        <a href="../html/login.html"><button class="logout-btn">Disconnect</button></a>
       </div>
     </div>
   </nav>
@@ -26,49 +32,61 @@
   <div class="container">
     <div class="second_navbar">
       <label>⏱ Duration:
-        <select id="mode">
+        <select id="duration" class="duration">
           <option value="easy">30 seconds</option>
           <option value="medium">60 seconds</option>
           <option value="hard">120 seconds</option>
         </select>
       </label>
       <label>Select the mode:
-        <select id="mode">
+        <select  id="difficulty" class="difficult">
           <option value="easy">Easy</option>
           <option value="medium">Medium</option>
           <option value="hard">Hard</option>
         </select>
       </label>
     </div>
-
-    <div class="write">
-      <p id="word-display"></p>
-      <input type="text" id="input-field" autofocus>
-    </div>
-
+    <div class="timer" id="timer">30s</div>
+    
     <div class="stats">
-      <div class="stat-box">
-        <h3>Sentences</h3>
-        <p id="phrasesCount">0</p>
-      </div>
-      <div class="stat-box">
-        <h3>WPM</h3>
-        <p id="cpm">0</p>
-      </div>
-      <div class="stat-box">
-        <h3>Accuracy</h3>
-        <p id="accuracy">0%</p>
-      </div>
+        <div class="stat-box">
+            <div class="stat-value" id="wpm">0</div>
+            <div class="stat-label">Mots/Min</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value" id="accuracy">0%</div>
+            <div class="stat-label">Précision</div>
+        </div>
     </div>
 
-    <div class="results">
-      <h2>Final results</h2>
-      <p id="finalCpm">Characters per minute: 0</p>
-      <p id="finalAccuracy">Accuracy: 0%</p>
-      <p id="finalPhrases">Completed sentences: 0</p>
-      <p id="finalChars">Typed characters: 0</p>
+    <div class="text-display" id="text-display"></div>
+    <div class="write">
+      <input type="text" id="text_input" placeholder="Type here.." autofocus>
     </div>
 
+    <div class="results" id="results">
+      <h2>Results</h2>
+      <div class="stats">
+          <div class="result_box">
+            <div class="stat-label">WPM</div>
+            <div class="stat-value" id="final-wpm">0</div>
+          </div>
+          <div class="result_box">
+            <div class="stat-label">Accuracy</div>
+            <div class="stat-value" id="final-accuracy">0%</div>
+          </div>
+          <div class="result_box">
+            <div class="stat-label">Words</div>
+            <div class="stat-value" id="total-words">0</div>
+          </div>
+          <div class="result_box">
+            <div class="stat-label">Characters</div>
+            <div class="stat-value" id="total-chars">0</div>
+          </div>
+      </div>
+      <canvas id="wpmChart"></canvas>
+  <button class="restart_btn">Restart</button>
+  </div>
     <div class="sentence">Type at full speed to blow up your score!</div>
   </div>
 

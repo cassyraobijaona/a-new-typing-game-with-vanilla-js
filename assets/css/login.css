@@ -38,6 +38,7 @@ h1 {
 
 
 .login {
+    position: relative; 
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-radius: 10px;
@@ -51,6 +52,18 @@ h1 {
     align-items: center;
     gap: 1rem;
     background-color: rgba(255, 255, 255, 0.05);
+}
+
+.back_icons {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.back_icons a i {
+    color: #11e4eb;
+    font-size: 1.5rem;
+    transition:  0.3s;
 }
 
 .login img {
@@ -126,7 +139,10 @@ label {
     margin: 0;
 }
 
-
+.back_icons a i{
+    color: #11e4eb;
+    font-size: 1.5rem;
+}
 @keyframes alertAnimation{
     0% {opacity: 0;}
     50% {opacity: 1;}
